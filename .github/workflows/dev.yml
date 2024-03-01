@@ -1,0 +1,27 @@
+name: dev Docker Images
+
+on:
+  push:
+    branches:
+      - dev  
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to AWS ECR
+      id: login-ecr
+      run: |
+        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws configure set default.region us-east-1
+        aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/y5i3n5q3
+
+    - name: Build and Push WordPress Docker image
+      run: |
+        docker build -t public.ecr.aws/y5i3n5q3/test:wordpress-test -f word.dockerfile .
+        docker push public.ecr.aws/y5i3n5q3/test:wordpress-test
