@@ -3,7 +3,7 @@ name: prod Docker Images
 on:
   push:
     branches:
-      - prod
+      - master
 
 jobs:
   build-and-push:

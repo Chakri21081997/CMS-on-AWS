@@ -3,7 +3,7 @@ name: dev Docker Images
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
   build-and-push:
