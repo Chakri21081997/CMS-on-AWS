@@ -1,9 +1,9 @@
-name: dev Docker Images
+name: prod Docker Images
 
 on:
   push:
     branches:
-      - master
+      - prod
 
 jobs:
   build-and-push:
