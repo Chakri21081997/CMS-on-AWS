@@ -2,7 +2,7 @@
 FROM wordpress:latest
 
 # Set environment variables
-ENV WORDPRESS_DB_HOST=db-prod.crw0iyascsde.us-east-1.rds.amazonaws.com
+ENV WORDPRESS_DB_HOST=database-1.crw0iyascsde.us-east-1.rds.amazonaws.com
 ENV WORDPRESS_DB_USER=chakri
 ENV WORDPRESS_DB_PASSWORD=$DB_PASSWORD
 ENV WORDPRESS_DB_NAME=chakri
