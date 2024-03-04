@@ -1,4 +1,4 @@
-# Use the official WordPress image as the base image
+
 FROM wordpress:latest
 
 # Set environment variables
