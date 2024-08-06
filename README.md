@@ -5,7 +5,7 @@ This repository automates building a WordPress Docker image, pushing it to Amazo
 **What's included?**
 
 * **Dockerfile ️:**  Defines the steps to build your WordPress image.
-* **CI/CD Workflow (`.github/workflows/test.yml`)**   : Uses GitHub Actions to automate the build, push, and deploy process on every push.
+* **CI/CD Workflow (`.github/workflows/prod.yml`)**   : Uses GitHub Actions to automate the build, push, and deploy process on every push.
 
 **Here's the magic ✨ :**
 
@@ -45,4 +45,4 @@ This repository automates building a WordPress Docker image, pushing it to Amazo
 * This is a basic example, and you might need to adjust it for your specific needs.
 * Make sure to secure your AWS credentials and ECR repository details.
 
-**Happy Deploying!   
+**Happy Deploying!**   
